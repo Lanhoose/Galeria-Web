@@ -1,0 +1,27 @@
+name: Publicar Roleta 100% offline
+on:
+  push:
+    branches: [roleta-pokemon-100-offline-v2]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  publicar:
+    if: github.ref_name == 'roleta-pokemon-100-offline-v2'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Montar ZIP e verificar os arquivos originais
+        run: python3 tools/build_release.py
+      - name: Publicar ZIP completo como arquivo da Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          RELEASE_COMMIT: ${{ github.sha }}
+        run: |
+          tag=roleta-pokemon-100-offline-v2.0.0
+          if gh release view "$tag" >/dev/null 2>&1; then
+            gh release upload "$tag" release/Roleta_Pokemon_100_Offline_Completo.zip release/Roleta_Pokemon_100_Offline_Completo.zip.sha256 --clobber
+          else
+            gh release create "$tag" release/Roleta_Pokemon_100_Offline_Completo.zip release/Roleta_Pokemon_100_Offline_Completo.zip.sha256 --target "$RELEASE_COMMIT" --title "Roleta Pokémon — versão 100% offline" --notes-file RELEASE_NOTES.md --latest=false
+          fi
