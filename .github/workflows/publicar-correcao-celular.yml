@@ -1,7 +1,7 @@
-name: Publicar correção offline para celular
+name: Publicar correção da importação offline no celular
 on:
   push:
-    branches: [roleta-celular-offline-v2-1]
+    branches: [roleta-celular-importacao-v2-1-1]
 permissions:
   contents: write
 jobs:
@@ -11,10 +11,10 @@ jobs:
       - uses: actions/checkout@v4
       - name: Conferir os arquivos
         run: sha256sum --check arquivos/SHA256SUMS
-      - name: Publicar HTML de abertura e GIFs
+      - name: Publicar HTML com importação corrigida
         env:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
           RELEASE_COMMIT: ${{ github.sha }}
         run: |
-          gh release create roleta-celular-offline-v2.1.0 arquivos/Roleta_Pokemon_Celular_Offline.html arquivos/GIFs_Alternativos_6_Pokemon.zip arquivos/LEIA-ME_CELULAR.txt arquivos/VALIDACAO_ANDROID.json arquivos/SHA256SUMS --target "$RELEASE_COMMIT" --title "Roleta Pokémon — correção offline para Android/Chrome" --notes-file RELEASE_NOTES.md --latest=false
+          gh release create roleta-celular-importacao-v2.1.1 arquivos/Roleta_Pokemon_Celular_Offline_v2_1_1.html arquivos/LEIA-ME_CELULAR.txt arquivos/VALIDACAO_IMPORTACAO.json arquivos/SHA256SUMS --target "$RELEASE_COMMIT" --title "Roleta Pokémon — importação de progresso corrigida no Android" --notes-file RELEASE_NOTES.md --latest=false

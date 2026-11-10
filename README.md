@@ -1,13 +1,11 @@
-Correção da abertura offline em Android/Chrome para o erro **RoletaOfflineGIF is not defined**.
+Correção da importação de progresso na abertura offline para Android/Chrome.
 
-1. Baixe apenas **Roleta_Pokemon_Celular_Offline.html**.
-2. Abra o HTML no Chrome do celular.
-3. Toque em **Selecionar o ZIP e jogar** e escolha o pacote completo que já está salvo no aparelho.
+1. Baixe **Roleta_Pokemon_Celular_Offline_v2_1_1.html**.
+2. Abra no Chrome e selecione o ZIP completo que você já possui.
+3. Importe novamente o mesmo JSON de progresso pelas configurações.
 
-O HTML lê imagens, GIFs e sons diretamente do ZIP. Não precisa extrair nem baixar os 756 MB novamente. Não há scripts externos nem conexão com a internet durante o jogo.
+A importação não volta mais à tela de seleção do ZIP. Ela reinicia somente o jogo e conserva o leitor local do pacote. A mesma correção se aplica a Nuzlocke, reinício de aventura e demais recarregamentos internos. O ZIP de 756 MB permanece o mesmo.
 
-Se precisar do pacote completo: https://github.com/Lanhoose/Galeria-Web/releases/download/roleta-pokemon-100-offline-v2.0.0/Roleta_Pokemon_100_Offline_Completo.zip
+Validação em emulação Android/Chrome, completamente offline: equipe, região, estágio e tentativas importados corretamente; ZIP selecionado uma única vez; modo normal e Nuzlocke; armazenamento do navegador permitido e bloqueado. Zero HTTP e zero erros JavaScript. Não foi usado um aparelho físico.
 
-Validação em emulação Android/Chrome (Pixel 7): navegador offline antes da seleção do ZIP, giro e captura do inicial, animações, sons, cenários, 198 treinadores e exportação de progresso; zero HTTP e zero erros JavaScript. Aparelho físico não testado.
-
-Também inclui **GIFs_Alternativos_6_Pokemon.zip**, com os seis GIFs alternativos encontrados e a relação dos 11 Pokémon/formas ainda sem GIF nas fontes verificadas. Esses GIFs são entregues separadamente.
+O arquivo JSON de progresso enviado pelo usuário é apenas lido; a importação não altera o arquivo original.

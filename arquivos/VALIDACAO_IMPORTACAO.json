@@ -1,0 +1,30 @@
+{
+  "emulacao": "Pixel 7 / Android / Chromium",
+  "navegador_offline_antes_do_zip": true,
+  "cenarios": [
+    {
+      "armazenamento": "browser",
+      "importacao_normal": "OK",
+      "importacao_nuzlocke": "OK",
+      "troca_modo": "OK",
+      "reiniciar_aventura": "OK",
+      "arquivo_zip_selecionado_uma_vez": true,
+      "equipe_e_estagio_preservados": true,
+      "reaberturas_do_jogo": 5,
+      "http": [],
+      "erros_javascript": []
+    },
+    {
+      "armazenamento": "session",
+      "importacao_normal": "OK",
+      "importacao_nuzlocke": "OK",
+      "troca_modo": "OK",
+      "reiniciar_aventura": "OK",
+      "arquivo_zip_selecionado_uma_vez": true,
+      "equipe_e_estagio_preservados": true,
+      "reaberturas_do_jogo": 5,
+      "http": [],
+      "erros_javascript": []
+    }
+  ]
+}
