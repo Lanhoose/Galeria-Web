@@ -1,0 +1,35 @@
+ROLETA POKÉMON — CORREÇÃO PARA ANDROID / CHROME
+
+Esta abertura não depende do carregamento de scripts ou imagens de pastas
+extraídas. Ela lê os recursos sob demanda diretamente do ZIP salvo no celular.
+
+COMO ABRIR
+1. Salve Roleta_Pokemon_Celular_Offline.html no celular.
+2. Abra esse HTML no Chrome.
+3. Toque em Selecionar o ZIP e jogar.
+4. Escolha Roleta_Pokemon_100_Offline_Completo.zip, o pacote de cerca de
+   756 MB que você já baixou.
+5. Aguarde a seleção de geração e jogue normalmente.
+
+Não precisa extrair o ZIP nem baixar novamente os 756 MB. O arquivo HTML
+novo é pequeno e não usa CDN, servidor local ou conexão à internet.
+A cada nova abertura do HTML, selecione o ZIP novamente.
+
+O progresso continua sendo salvo quando o navegador permite armazenamento.
+Use Exportar progresso e Importar progresso nas configurações para manter
+uma cópia ou transferir a partida entre versões e aparelhos.
+
+Verificação: emulação de Pixel 7 com Chromium, navegador colocado offline
+antes da seleção do ZIP; giro completo, captura do inicial, imagens, GIFs,
+sons, cenários, treinadores e exportação de progresso; zero HTTP e zero erros
+JavaScript. Um aparelho físico não foi usado neste teste.
+
+PACOTE DE GIFS SEPARADO
+GIFs_Alternativos_6_Pokemon.zip contém os seis GIFs alternativos encontrados
+para Iron Hands, Iron Moth, Iron Thorns, Iron Valiant, Miraidon e Terapagos.
+As fontes e os 11 Pokémon/formas ainda sem GIF estão documentados dentro dele.
+
+BIBLIOTECA
+A abertura inclui fflate 0.8.2, de Arjun Barrett, sob licença MIT. A licença
+completa está incluída no próprio HTML. Os recursos de Pokémon mantêm os
+créditos e fontes do pacote completo da Roleta.

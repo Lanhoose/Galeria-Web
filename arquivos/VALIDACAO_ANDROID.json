@@ -1,0 +1,32 @@
+{
+  "images": 18,
+  "gifFrames": 33,
+  "trainers": 198,
+  "sounds": [
+    {
+      "id": 1,
+      "duration": 0.942557
+    },
+    {
+      "id": 25,
+      "duration": 0.926021
+    },
+    {
+      "id": 10034,
+      "duration": 1.614417
+    }
+  ],
+  "stats": {
+    "resources": 37,
+    "loadedBytes": 2872298,
+    "archiveBytes": 755559305
+  },
+  "storage": "browser",
+  "errors": [],
+  "http_requests": [],
+  "javascript_errors": [],
+  "progress_export": "OK",
+  "mobile_emulation": "Pixel 7, Chromium",
+  "offline_before_zip_selection": true,
+  "giro_e_captura_inicial": "OK"
+}

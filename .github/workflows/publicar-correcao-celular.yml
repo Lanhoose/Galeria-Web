@@ -1,0 +1,20 @@
+name: Publicar correção offline para celular
+on:
+  push:
+    branches: [roleta-celular-offline-v2-1]
+permissions:
+  contents: write
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Conferir os arquivos
+        run: sha256sum --check arquivos/SHA256SUMS
+      - name: Publicar HTML de abertura e GIFs
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          RELEASE_COMMIT: ${{ github.sha }}
+        run: |
+          gh release create roleta-celular-offline-v2.1.0 arquivos/Roleta_Pokemon_Celular_Offline.html arquivos/GIFs_Alternativos_6_Pokemon.zip arquivos/LEIA-ME_CELULAR.txt arquivos/VALIDACAO_ANDROID.json arquivos/SHA256SUMS --target "$RELEASE_COMMIT" --title "Roleta Pokémon — correção offline para Android/Chrome" --notes-file RELEASE_NOTES.md --latest=false
